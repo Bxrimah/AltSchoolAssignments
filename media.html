@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2 :: Media Showcase</title>
+</head>
+<body>
+
+    <h1>About Me – Through Media</h1>
+
+    <!-- Responsive picture element showing different images based on device width -->
+     <div id="image-section">
+        <h2>My Profile Picture</h2>
+
+        <!-- Using picture element for responsive images -->
+        <p>This is a picture of me, displayed differently based on the device's screen size</p>
+        <p>Resize your browser window to see the effect.</p>
+
+        <picture>
+            <source media="(max-width: 600px)" srcset="./images/me-mobile.jpg">
+            <source media="(max-width: 1024px)" srcset="./images/me-tablet.jpg">
+            <source media="(min-width: 1025px)" srcset="./images/me-desktop.jpg">
+            <img src="https://blog.foldermarker.com/wp-content/uploads/2022/06/New-Project-11-1090x572.png" alt="A picture of me" width="300">
+        </picture>
+
+        <p>This image is responsive and will change based on the screen size.</p>
+        <img src="./assets/images/me-default.jpg" alt="A picture of me" width="100%" height="auto">
+        <br>
+
+        <!-- Static image representing a hobby -->
+        <h2>Image</h2>
+        <img src="./images/hobby.jpg" alt="My favorite hobby" width="300">
+    </div>
+
+    <!-- Audio player with multiple formats for compatibility -->
+    <div id="audio-section">
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="audio/voice-intro.mp3" type="audio/mpeg">
+            <source src="audio/voice-intro.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <!-- Video player with multiple formats and subtitles -->
+    <div id="video-section">
+        <h2>Video</h2>
+
+        <video width="320" height="240" controls>
+            <source src="./videos/horses.mp4" type="video/mp4">
+            <source src="./videos/horses.webm" type="video/webm">
+            <track src="./subtitles/subtitle.vtt" kind="subtitles" srclang="en" label="English">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+</body>
+</html>
